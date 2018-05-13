@@ -1,4 +1,19 @@
-# Sapient
+# Angular 6 Games List
+
+It is an simple application to list available games with search, pagination and sorting functionalities in Angular 6 framework.
+
+Check live demo here :
+
+* [https://stackblitz.com/edit/angular6-gameslist](https://stackblitz.com/edit/angular6-gameslist)
+
+
+How to setup & run ==>
+
+* Clone or download master branch
+* Open terminal and move to root directory
+* Run `npm install` to install node dependencies
+* Run `ng serve -o` to launch the application
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 

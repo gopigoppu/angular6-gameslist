@@ -9,6 +9,6 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getGameList() {
-    return this.http.get('http://starlord.hackerearth.com/gamesext');
+    return this.http.get('../../../../assets/gamesext.json');
   }
 }

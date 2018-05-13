@@ -15,8 +15,8 @@
 
 
 <div class="container-fluid board-container">
+  <div class="gamelist-title-bar">List of Games</div>
   <div class="row board-section">
-
     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 news-box" *ngFor="let list of gameListData | orderBy: order:reverse:'case-insensitive' | filter:filter | paginate: { itemsPerPage: 10, currentPage:p }  ">
       <div class="card">
         <div class="card-body">

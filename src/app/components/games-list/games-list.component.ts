@@ -11,6 +11,7 @@ import { OrderPipe } from 'ngx-order-pipe';
 export class GamesListComponent implements OnInit {
 
   gameListData: any;
+  filter: any;
   p = 1;
   order = 'title';
   reverse = false;

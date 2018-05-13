@@ -1,13 +1,13 @@
 <div class="container search-container">
   <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Search News" aria-label="Search News" aria-describedby="basic-addon2"
+    <input type="text" class="form-control" placeholder="Search Games" aria-label="Search Games" aria-describedby="basic-addon2"
       [(ngModel)]="filter" (ngModelChange)="checkQuery($event)">
     <div class="input-group-append">
       <i class="fa fa-search search-icon"></i>
-      <i class="fas fa-sort-alpha-down search-icon"></i>
     </div>
-    <div>
-      <i class="fas fa-sort-alpha-up sort-icon"></i>
+    <div class="input-group-append sort-icon">
+      <i class="fas fa-sort-alpha-up search-icon" [hidden]="reverse" (click)="setOrder('title')"></i>
+      <i class="fas fa-sort-alpha-down search-icon" [hidden]="!reverse" (click)="setOrder('title')"></i>
     </div>
   </div>
 </div>
@@ -17,7 +17,7 @@
 <div class="container-fluid board-container">
   <div class="row board-section">
 
-    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 news-box" *ngFor="let list of gameListData | filter:filter | paginate: { itemsPerPage: 10, currentPage:p }; | orderBy: order:reverse:'case-insensitive'">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 news-box" *ngFor="let list of gameListData | orderBy: order:reverse:'case-insensitive' | filter:filter | paginate: { itemsPerPage: 10, currentPage:p }  ">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">

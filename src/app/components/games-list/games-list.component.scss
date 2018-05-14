@@ -1,14 +1,3 @@
-.search-container{
-  padding: 50px;
-}
-
-.search-icon{
-  font-size: 25px;
-  padding-left: -20px;
-  margin-left: -33px;
-  z-index: 100;
-  margin-top: 5px;
-}
 
 .genre{
   width: 33%;
@@ -52,10 +41,6 @@
 
 .news-box{
   padding-bottom: 10px;
-}
-
-.ngx-pagination{
-  margin-left: 22% !important ;
 }
 
 .board-section{
@@ -113,20 +98,13 @@
 }
 
 .card-title{
-  overflow: auto;
+  overflow: hidden;
 }
 .card-body{
-  overflow: auto;
+  overflow: hidden;
 }
 
-.sort-icon{
-  font-size: 25px;
-  padding: 5px;
-  color: #00507a;
-  margin-left: 35px;
-  text-shadow: 1px 1px 18px;
-  cursor: pointer;
-}
+
 
 .gamelist-title-bar{
   margin-left: 7%;

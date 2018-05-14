@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../shared/services/api/api.service';
 import { PageService } from '../../shared/services/page/page.service';
 import { OrderPipe } from 'ngx-order-pipe';
+import { SearchService } from '../../shared/services/common/search.service';
+import { SortService } from '../../shared/services/common/sort.service';
+import { PaginationService } from '../../shared/services/common/pagination.service';
+
 
 @Component({
   selector: 'app-games-list',
@@ -17,35 +21,34 @@ export class GamesListComponent implements OnInit {
   reverse = false;
   sortedCollection: any[];
 
-  constructor(private apiService: ApiService, private pageService: PageService, private orderPipe: OrderPipe) { }
+  constructor(private apiService: ApiService, private pageService: PageService, private orderPipe: OrderPipe,
+  private searchService: SearchService, private sortService: SortService, private paginationService: PaginationService) { }
 
   ngOnInit() {
     this.apiService.getGameList().subscribe((data: any) => {
       // console.log(data);
       this.gameListData = data;
       this.sortedCollection = this.orderPipe.transform(this.gameListData, this.order);
+      this.searchService.filterValue.subscribe((value) => {
+        this.filter = value;
+      });
+      this.sortService.sortValue.subscribe((value) => {
+        this.reverse = !!(value);
+      })
+
+      this.paginationService.paginationValue.subscribe( (value) => {
+        this.p = parseInt(value);
+      })
+
       setTimeout(() => {
         this.pageService.setBodyBGHeight('board-container', 'search-container');
       }, 0);
     });
 
 
+
   }
 
-  setOrder(value: string) {
-    this.reverse = !this.reverse;
-    console.log(value);
-    setTimeout(() => {
-      this.pageService.setBodyBGHeight('board-container', 'search-container');
-    }, 0);
-  }
-
-
-  checkQuery(filter) {
-    // console.log(filter);
-    setTimeout(() => {
-      this.pageService.setBodyBGHeight('board-container', 'search-container');
-    }, 0);
-  }
+ 
 
 }

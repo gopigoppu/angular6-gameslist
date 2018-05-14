@@ -1,16 +1,4 @@
-<div class="container search-container">
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Search Games" aria-label="Search Games" aria-describedby="basic-addon2"
-      [(ngModel)]="filter" (ngModelChange)="checkQuery($event)">
-    <div class="input-group-append">
-      <i class="fa fa-search search-icon"></i>
-    </div>
-    <div class="input-group-append sort-icon">
-      <i class="fas fa-sort-alpha-up search-icon" [hidden]="reverse" (click)="setOrder('title')"></i>
-      <i class="fas fa-sort-alpha-down search-icon" [hidden]="!reverse" (click)="setOrder('title')"></i>
-    </div>
-  </div>
-</div>
+<app-games-list-search></app-games-list-search>
 
 
 
@@ -45,6 +33,4 @@
   </div>
 </div>
 
-<div class="container search-container">
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
-</div>
+<app-games-list-pagination></app-games-list-pagination>

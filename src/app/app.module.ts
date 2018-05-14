@@ -15,6 +15,8 @@ import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { OrderModule } from 'ngx-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { GamesListSearchComponent } from './components/games-list-search/games-list-search.component';
+import { GamesListPaginationComponent } from './components/games-list-pagination/games-list-pagination.component';
 
 
 
@@ -23,7 +25,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AppComponent,
     HeaderComponent,
     GamesListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GamesListSearchComponent,
+    GamesListPaginationComponent
   ],
   imports: [
     BrowserModule,

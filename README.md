@@ -2,6 +2,9 @@
 
 It is an simple application to list available games with search, pagination and sorting functionalities in Angular 6 framework.
 
+asdg
+asdg
+git st
 Check live demo here :
 
 * [https://stackblitz.com/edit/angular6-gameslist](https://stackblitz.com/edit/angular6-gameslist)

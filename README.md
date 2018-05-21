@@ -1,6 +1,6 @@
 # Angular 6 Games List
 
-It is an simple application to list available games with search, pagination and sorting functionalities in Angular 6 framework.
+It is an simple application to list available games with search, pagination and sorting functionalities in Angular 6 framework. Also it uses third party plugin for pagination, search and filter services.
 
 asdg
 asdg
